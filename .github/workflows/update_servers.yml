@@ -23,11 +23,10 @@ jobs:
       run: |
         curl "https://instances.social/api/1.0/instances/list?count=0&include_dead=false&sort_by=users&sort_order=desc" -H "Authorization: Bearer ${{secrets.INSTANCES_SOCIAL_TOKEN}}" | jq .instances[].name > servers.json
     - name: Deploy
-      uses: s0/git-publish-subdir-action@develop
-      env:
-        REPO: self
-        BRANCH: servers
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        MESSAGE: Updated server list
-        COMMIT-NAME: 🤖 GitHub Action
-        COMMIT_EMAIL: update_servers.yaml@github.actions
+      uses: actions-js/push@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: servers
+        message: Updated server list
+        author_name: 🤖 GitHub Action
+        author_email: update_servers.yaml@github.actions
