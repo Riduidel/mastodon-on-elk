@@ -1,4 +1,4 @@
-name: mvnrepository
+name: Update servers list from instances.social API
 on:
   push:
     branches: [ servers ]
