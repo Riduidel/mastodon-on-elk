@@ -6,8 +6,7 @@
 // @match      https://*/*
 // @match      http://*/*
 // @noframes
-// @run-at document-end
-// @grant GM.listValues
+// @run-at document-start
 // @grant GM.getValue
 // @grant GM.setValue
 // @grant GM.xmlHttpRequest
