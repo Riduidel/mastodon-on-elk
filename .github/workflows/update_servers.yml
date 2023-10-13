@@ -16,8 +16,8 @@ jobs:
       uses: actions/checkout@v3
     - name: Install requirements
       run: |
-        apt install curl -y
-        apt install jq -y
+        sudo apt install curl -y
+        sudo apt install jq -y
     - name: Run extraction sequence
     # instances.social app id is 628232131
       run: |
