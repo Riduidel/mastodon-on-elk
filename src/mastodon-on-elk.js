@@ -62,11 +62,13 @@ function redirectMastodonToElk(configText) {
   const config = JSON.parse(configText)
   console.info(PREFIX, "We have a valid mastodon config, testing server url", window.location, "⁉️")
   const server = window.location.host
-  if(config.servers.includes(server)) {
-	  console.info(PREFIX, "Looks like a mastodon server! Redirecting! ⚡")
-  	window.location.href = `https://elk.zone/${server}${window.location.pathname}`
-  } else {
-    console.info(PREFIX, "This is not a mastodon server ❌")
+  if(server) {
+    if(config.servers.includes(server)) {
+      console.info(PREFIX, "Looks like a mastodon server! Redirecting! ⚡")
+      window.location.href = `https://elk.zone/${server}${window.location.pathname}`
+    } else {
+      console.info(PREFIX, "This is not a mastodon server ❌")
+    }
   }
 }
 
