@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       mastodon-on-elk
-// @namespace  https://elk.zone/framapiaf.org/@Riduidel
+// @namespace  https://github.com/Riduidel/mastodon-on-elk
 // @version    0.1
 // @description  Redirects all mastodon servers I know to be seen in the excellent https://elk.zone/ mastodon UI.
 // @match      https://*/*
